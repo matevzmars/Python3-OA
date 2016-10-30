@@ -1,0 +1,11 @@
+a=input('Vnesi prvo številko: ')
+b=input('Vnesi drugo številko: ')
+a=int(a)
+b=int(b)
+
+print('Vsota je: ' + str(a+b))
+print('Razlika je: ' + str(a-b))
+print('Kvocient je: ' + str(a/b))
+print('Produkt je: ' + str(a*b))
+print('Celoštevilski kvocient je: ' + str(a//b))
+print('Ostanek pri deljenju je: ' + str(a%b))
