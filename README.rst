@@ -24,6 +24,7 @@ Kazalo:
 - `Ev3dev operacijski sistem`_
 - `Putty client`_
 - `Naslednji koraki`_
+- `Uporabni ukazi v linux ukazni vrstici`_
 
 Namestitev Python IDLE-ja
 -------------------------
@@ -139,8 +140,7 @@ putty prepišite ali prekopirate (v puttyju namesto kombinacije tipk CTRL+V upor
 
 Po pritisku tipke ENTER, boste morali vnesti geslo (isto kot prej: *maker*). 
 
-**OPOZORILO:** ukaz *sudo* je zelo močen ukaz, s katerim pridobite administratorske pravice in lahko naredite veliko 
-škode. Če ukaza, ne poznate ga ne zaganjajte z administratorskimi pravicami (tj. ne napišite *sudo* pred ukazom)
+**OPOZORILO:** ukaz *sudo* je zelo močen ukaz, s katerim pridobite administratorske pravice in lahko naredite veliko škode. Če ukaza, ne poznate ga ne zaganjajte z administratorskimi pravicami (tj. ne napišite *sudo* pred ukazom)
 
 Nato skopirajte še ta ukaz:
 
@@ -148,9 +148,7 @@ Nato skopirajte še ta ukaz:
 
    sudo apt-get dist-upgrade
 
-Na zaslonu se bo izpisal seznam in na koncu boste vprašani ali želite nadaljevati ali ne. Vpišite **y** in pritisnite 
-**ENTER**. Ta korak lahko traja tudi dlje kot eno uro, zato poskrbite, da je baterija napolnjena ali da je brick priključen 
-na polnilec.
+Na zaslonu se bo izpisal seznam in na koncu boste vprašani ali želite nadaljevati ali ne. Vpišite **y** in pritisnite **ENTER**. Ta korak lahko traja tudi dlje kot eno uro, zato poskrbite, da je baterija napolnjena ali da je brick priključen na polnilec.
 
 Tadva ukaza uporabimo vsakič, ko želimo posodobiti programe in operacijski sistem. 
 
@@ -160,15 +158,13 @@ Nato moramo namestiti Python in še en dodaten program:
 
    sudo apt-get install python3-ev3dev python3-pip
 
-Spet se nam izpiše seznam in vprašanje ali želimo nadaljevati. Ponovimo postopek od prej in počakamo, da se zaključi. V zadnjem 
-koraku namestimo še Pythonov modul, za prepoznavo tipk:
+Spet se nam izpiše seznam in vprašanje ali želimo nadaljevati. Ponovimo postopek od prej in počakamo, da se zaključi. V zadnjem koraku namestimo še Pythonov modul, za prepoznavo tipk:
 
 .. code-block:: bash
 
    sudo pip3 install readchar
 
-Če se vam na zaslonu izpiše napaka, to pomeni, da se modul readchar ni namestil in ga bo potrebno ročno prenesti. Sledite 
-navodilom v poglavju `Pip3 namestitev modula Readchar`_. Ko so morebitni problemi odpravljeni poženite ukaz:
+Če se vam na zaslonu izpiše napaka, to pomeni, da se modul readchar ni namestil in ga bo potrebno ročno prenesti. Sledite navodilom v poglavju `Pip3 namestitev modula Readchar`_. Ko so morebitni problemi odpravljeni poženite ukaz:
 
 .. code-block:: bash
 
@@ -178,4 +174,85 @@ in počakajte na ponovni zagon.
 
 Pip3 namestitev modula Readchar
 -------------------------------
+Najprej potrebujete program, za prenašanje datotek. Priporočam uporabo programa `Filezilla <https://filezilla-project.org/>`_. Prenesite in namestite program Filezilla client. Preden zaženete program prenesite datoteko *dist-packages.rar* v mapi **Drugo/**. Ob zagonu v okence **Gostitelj (Host)** vpišite IP številko bricka (številke v zgornjem levem kotu zaslona), **Uporabniško ime (Username)** je *robot*, **Geslo (Password)** je *maker* in **Vrata (Gate)** vpišite *22*. Pritisnite ENTER in na desni strani se prikaže osnovna mapa na Mindstorms bricku, na levi pa so prikazane mape vašega računalnika. Premaknite se v mapo, kamor ste shranili datoteko *dist-packages.rar* in jo z miško potegnite v desni okvir. Ko je datoteka prenesena, prekinite povezavo in zaprite program. Sedaj se vrnite v Putty in poženite ukaze enega za drugim:
+
+.. code-block:: bash
+    
+   sudo apt-get install unrar
+   unrar e dist-packages.rar
+   sudo mv dist-packages/readchar* /usr/local/lib/python3.4/dist-packages/
+   rm -r dist-packages
+
+Uporabni ukazi v linux ukazni vrstici
+-------------------------------------
+
+- Seznam datotek v trenutni mapi (skupaj s podrobnostmi):
+
+.. code-block:: bash
+
+   ls -l
+
+- Premik v mapo, ki se nahaja znotraj trenutne mape:
+
+.. code-block:: bash
+
+   cd ime_mape/
+
+- Premik v podmapo (za nadaljnje mape se niz nadaljuje):
+
+.. code-block:: bash
+
+   cd ime_mape/ime_podmape/
+
+- Premik iz trenutne mape:
+
+.. code-block:: bash
+
+   cd ../
+
+- Ustvari novo mapo:
+
+.. code-block:: bash
+
+   mkdir ime_mape
+
+- Ustvari novo datoteko:
+
+.. code-block:: bash
+
+   touch ime_datoteke.končnica
+
+- Izbris datoteke:
+
+.. code-block:: bash
+
+   rm ime_datoteke.končnica
+
+- Izbris mape:
+
+.. code-block:: bash
+
+   rm -r ime_mape
+
+- Kopiranje datoteke:
+
+.. code-block:: bash
+
+   cp /originalna_lokacija/ime_datoteke.končnica /nova_lokacija/ime_datoteke.končnica
+
+- Kopiranje mape:
+
+.. code-block:: bash
+
+   cp -r /originalna_lokacija/ime_mape /nova_lokacija/ime_mape
+
+- Premik datoteke/mape:
+
+.. code-block:: bash
+
+   mv /originalna_lokacija/ime_mape /nova_lokacija/ime_mape/datoteke.končnica
+   mv /originalna_lokacija/ime_datoteke.končnica /nova_lokacija/ime_datoteke.končnica
+
+
+
 
