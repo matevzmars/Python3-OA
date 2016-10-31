@@ -29,7 +29,7 @@ while True:
 	if(key=='q' or key==ESC or key==chr(127)):
 		break	
 	elif(key>=chr(48) and key<=chr(57)):
-		sp=10*int(key)
+		sp=10*(int(key)+1)
 	elif(key==' ' or key==chr(32)):
 		m1.duty_cycle_sp=0
 		m2.duty_cycle_sp=0
