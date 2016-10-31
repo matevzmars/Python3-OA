@@ -23,7 +23,7 @@ Kazalo:
 - `Namestitev Python IDLE-ja`_
 - `Ev3dev operacijski sistem`_
 - `Putty client`_
-- `Dodatne namestive`_
+- `Naslednji koraki`_
 
 Namestitev Python IDLE-ja
 -------------------------
@@ -127,10 +127,55 @@ V tej ukazni vrstici lahko pišemo programe in jih poganjamo. Poleg tega pa lahk
 sistem in opravljamo operacije kot v vsakem drugem sistemu. Je pa res, da nimamo na voljo miške in smo omejeni 
 le na tipkovnico.
 
-Dodatne namestive
+Naslednji koraki
 -----------------
+Po tem, ko smo uspešno zagnali Ev3dev operacijski sistem in vzpostavili povezavo med računalnikom in Mindstorms 
+brickom, moramo namestiti še nekaj programov. A najprej posodobimo sistem na bricku. V ukazno vrstico v programu 
+putty prepišite ali prekopirate (v puttyju namesto kombinacije tipk CTRL+V uporabite desni klik) naslednja ukaza:
 
+.. code-block:: bash
+   
+   sudo apt-get update
 
+Po pritisku tipke ENTER, boste morali vnesti geslo (isto kot prej: *maker*). 
 
+**OPOZORILO:** ukaz *sudo* je zelo močen ukaz, s katerim pridobite administratorske pravice in lahko naredite veliko 
+škode. Če ukaza, ne poznate ga ne zaganjajte z administratorskimi pravicami (tj. ne napišite *sudo* pred ukazom)
 
+Nato skopirajte še ta ukaz:
+
+.. code-block:: bash
+
+   sudo apt-get dist-upgrade
+
+Na zaslonu se bo izpisal seznam in na koncu boste vprašani ali želite nadaljevati ali ne. Vpišite **y** in pritisnite 
+**ENTER**. Ta korak lahko traja tudi dlje kot eno uro, zato poskrbite, da je baterija napolnjena ali da je brick priključen 
+na polnilec.
+
+Tadva ukaza uporabimo vsakič, ko želimo posodobiti programe in operacijski sistem. 
+
+Nato moramo namestiti Python in še en dodaten program:
+
+.. code-block:: bash
+
+   sudo apt-get install python3-ev3dev python3-pip
+
+Spet se nam izpiše seznam in vprašanje ali želimo nadaljevati. Ponovimo postopek od prej in počakamo, da se zaključi. V zadnjem 
+koraku namestimo še Pythonov modul, za prepoznavo tipk:
+
+.. code-block:: bash
+
+   sudo pip3 install readchar
+
+Če se vam na zaslonu izpiše napaka, to pomeni, da se modul readchar ni namestil in ga bo potrebno ročno prenesti. Sledite 
+navodilom v poglavju `Pip3 namestitev modula Readchar`_. Ko so morebitni problemi odpravljeni poženite ukaz:
+
+.. code-block:: bash
+
+   sudo reboot
+
+in počakajte na ponovni zagon.
+
+Pip3 namestitev modula Readchar
+-------------------------------
 
