@@ -179,9 +179,9 @@ Najprej potrebujete program, za prenašanje datotek. Priporočam uporabo program
 .. code-block:: bash
     
    sudo apt-get install unrar
-   unrar e dist-packages.rar
+   unrar x dist-packages.rar
    sudo mv dist-packages/readchar* /usr/local/lib/python3.4/dist-packages/
-   rm -r dist-packages
+   rm -r dist-packages*
 
 Uporabni ukazi v linux ukazni vrstici
 -------------------------------------
@@ -191,6 +191,12 @@ Uporabni ukazi v linux ukazni vrstici
 .. code-block:: bash
 
    ls -l
+   
+- Prikaz trenutne mape:
+
+.. code-block:: bash
+
+   pwd
 
 - Premik v mapo, ki se nahaja znotraj trenutne mape:
 
@@ -253,6 +259,10 @@ Uporabni ukazi v linux ukazni vrstici
    mv /originalna_lokacija/ime_mape /nova_lokacija/ime_mape/datoteke.končnica
    mv /originalna_lokacija/ime_datoteke.končnica /nova_lokacija/ime_datoteke.končnica
 
+- Zagon beležnice in ustvarjanje nove datoteke:
 
+.. code-block:: bash
+
+   nano ime_datoteke.končnica
 
 
