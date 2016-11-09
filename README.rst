@@ -25,6 +25,7 @@ Kazalo:
 - `Putty client`_
 - `Naslednji koraki`_
 - `Uporabni ukazi v linux ukazni vrstici`_
+- `Pythonova knjižnica in primeri uporabe za Ev3dev`_
 
 Namestitev Python IDLE-ja
 -------------------------
@@ -265,4 +266,11 @@ Uporabni ukazi v linux ukazni vrstici
 
    nano ime_datoteke.končnica
 
+Pythonova knjižnica in primeri uporabe za Ev3dev
+------------------------------------------------
 
+Na spodnjih dveh povezavah najdete opis Pythonove knjižnice za poganjanje Lego Mindstormsov:
+
+- `python-ev3dev.readthedocs.io <http://python-ev3dev.readthedocs.io/en/latest/spec.html>`_
+
+- `sites.google.com/site/ev3python/ <https://sites.google.com/site/ev3python/>`_
