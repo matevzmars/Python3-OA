@@ -1,6 +1,5 @@
 1. naloga:
-Izpiši števila, ki so deljiva s 7 in so večkratniki števila 5, med 
-števili 1500 in 2700.
+Izpiši števila, ki so deljiva s 7 in so večkratniki števila 5, med števili 1500 in 2700.
 
 REŠITEV:
 for i in range(1500,2701):
@@ -14,8 +13,7 @@ while(a<=2700):
 		print(i)
 
 2. naloga:
-Napiši program, v katerem uporabnik ugiba število med 1 in 100. 
-Rešuj z metodo bisekcije. Prvi dve vrstici programa naj vsebujeta:
+Napiši program, v katerem uporabnik ugiba število med 1 in 100. Rešuj z metodo bisekcije. Prvi dve vrstici programa naj vsebujeta:
 from random import *
 a=randint(1,100)
 
@@ -37,12 +35,38 @@ while(b!=a):
 print('Uganil si! Iskano število je: %s' %a)
 
 3. naloga:
-Napiši program, ki uporabnika vpraša po besedi in jo izpiše v obratnem
-vrstnem redu. (Namig: beseda je neke vrste seznam)
+Napiši program, ki uporabnika vpraša po besedi in jo izpiše v obratnem vrstnem redu. (Namig: beseda je neke vrste seznam)
+
+beseda=input('Vpiši besedo: ')
+
+#rešitev s for zanko
+for i in range(1,len(beseda)+1):
+    print(beseda[-i])
+
+#rešitev z while zanko
+j=1
+while j<=len(beseda):
+    print(beseda[-j])
+    j=j+1
+
+#kaj pa če želimo izpisati besedo v eni vrstici
+#rešitev s for zanko
+nova_beseda=''
+for i in range(1,len(beseda)+1):
+    nova_beseda=nova_beseda+beseda[-i]
+print(nova_beseda)
+
+#rešitev z while zanko
+nova_beseda=''
+j=1
+while j<=len(beseda):
+    nova_beseda=nova_beseda+beseda[-j]
+    j=j+1
+print(nova_beseda)
+
 
 4. naloga:
-Napiši program, ki uporabnika vpraša po številki in izpiše vsoto vseh 
-naravnih števil, da vnešene številke (vključno z njo).
+Napiši program, ki uporabnika vpraša po številki in izpiše vsoto vseh naravnih števil, da vnešene številke (vključno z njo).
 Primer:
 Vpiši število: 4
 10
@@ -52,8 +76,7 @@ Vpiši število: 50
 1275
 
 5. naloga:
-Napiši program, ki uporabnika vpraša po številki in izpiše večkratnike 
-tega števila.
+Napiši program, ki uporabnika vpraša po številki in izpiše večkratnike tega števila.
 Primer:
 Vpiši število: 6
 6 x 1 = 6
