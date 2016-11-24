@@ -19,34 +19,44 @@
 # Nariši pravokotnik, trikotnik, kvadrat brez vogalov. Kako lahko še narišeš
 # kvadrat brez vogalov? Nariši hišo, ki ima vrata in dve okni. Nariši svoje ime.
 # ###############################################################
-# http://python-ev3dev.readthedocs.io/en/latest/spec.html
-# https://sites.google.com/site/ev3python/
 
-# #!/usr/bin/env python3
-# import ev3dev.ev3 as ev3
-# ###############################################################
-# Motorji
-# m=ev3.LargeMotor('outA')
+#Srednji motor
+m=ev3.MediumMotor('outA')
 
-# #neskončno vrtenje
-# m.run_forever(speed_sp=100) #speed_sp je od 0 do 900
-# m.stop(stop_action='brake') #stop_action je lahko 'brake' ali 'coast'
+#Senzor za dotik
+t=ev3.TouchSensor('in1')
+a=t.is_pressed() 	# ali smo pritisnili gumb
 
-# #vrtenje za določen kot
-# m.run_to_rel_pos(position_sp=360,speed_sp=100) 
+#Barvni senzor
+c=ev3.ColorSensor('in2')
+a=c.ambient_light_intensity() 	#intenziteta okoliške svetlobe
+b=c.blue() 	#koliko modre barve smo zaznali
+r=c.red() 	#koliko rdeče barve smo zaznali
+g=c.green() 	#koliko zelene barve smo zaznali
+d=c.color() 	#kakšno svetlobo smo zaznali (glej dokumentacijo)
+e=c.reflected_light_intensity() 	#intenziteta odbite svetlobe
 
-# #neskončno vrtenje, kjer lahko vmes spreminjaš hitrost
-# m.run_direct(duty_cycle_sp=20) #duty_cycle je od 0 do 100
-# m.duty_cycle_sp=30
+#Senzor razdalje
+u=ev3.UltrasonicSensor('in3')
+a=u.distance_centimeters()	#pove razdaljo
+b=u.other_sensor_present()	#preveri ali sliši se kakšen ultrazvočni senzor
 
-# #vrtenje za določen čas
-# m.run_timed(time_sp=1000,speed_sp=100) #čas je v milisekundah
+#Žiroskop
+g=ev3.GyroSensor('in4')
+a=g.angle() #vrne kot
+b=g.rate()	#vrne kotno hitrost
 
-# m.reset()
+#Tipke
+b=ev3.Button()
+a=b.backspace()	#preveri ali je pritisnjen gumb nazaj
+a=b.down()		#preveri ali je pritisnjen gumb dol
+a=b.enter()		#preveri ali je pritisnjen gumb enter
+a=b.up()		#preveri ali je pritisnjen gumb gor
+a=b.left()		#preveri ali je pritisnjen gumb levo
+a=b.right()		#preveri ali je pritisnjen gumb desno
 
-# m.duty_cycle_sp=50
-# m.duty_cycle_sp
+#Led
 
-# from time import sleep
-# sleep(5) #počaka 5 sekund
+#Zaslon
 
+#Zvok
