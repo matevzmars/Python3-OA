@@ -1,0 +1,35 @@
+import turtle
+
+t=turtle.Pen()
+u=turtle.Pen()
+v=turtle.Pen()
+z=turtle.Pen()
+w=turtle.Pen()
+y=turtle.Pen()
+
+t.ht()
+u.ht()
+v.ht()
+z.ht()
+w.ht()
+y.ht()
+
+u.left(60)
+v.left(60*2)
+z.left(60*3)
+w.left(60*4)
+y.left(60*5)
+
+for i in range(240):
+    t.forward(1)
+    u.forward(1)
+    v.forward(1)
+    z.forward(1)
+    w.forward(1)
+    y.forward(1)
+    t.left(1)
+    u.left(1)
+    v.left(1)
+    z.left(1)
+    w.left(1)
+    y.left(1)
