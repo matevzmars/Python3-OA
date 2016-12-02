@@ -37,3 +37,13 @@ c)for i in range(0,len(seznam)):
 ###############################################################
 6. naloga: WHILE zanka
 Oštevilči svoj seznam. Naredi tudi s FOR zanko.
+###############################################################
+7. naloga: WHILE zanka
+Dva štejeta, s tem, da eden začne pri 15, drugi pa 30. Prvi bo
+nehal štet, ko pride do 25, drugi pa 45. Ko eden neha štet, neha tudi drugi.
+Pri katerih številkah se bosta ustavila? Izpiši štetje.
+###############################################################
+8. naloga: turtle
+Nariši pravokotnik, trikotnik, kvadrat brez vogalov. Kako lahko še narišeš
+kvadrat brez vogalov? Nariši hišo, ki ima vrata in dve okni. Nariši svoje ime.
+###############################################################
