@@ -84,6 +84,18 @@ if + break
 while True:
     print(a)
 ###############################################################
+Risanje: Turtle
+import turtle
+t=turtle.Pen()
+t.forward()
+t.backward()
+t.left()
+t.right()
+t.up()
+t.down()
+t.reset()
+t.clear()
+###############################################################
 Lego Mindstorms
 
 http://python-ev3dev.readthedocs.io/en/latest/spec.html
@@ -116,3 +128,10 @@ m.duty_cycle_sp
 
 from time import sleep
 sleep(5) #počaka 5 sekund
+
+#Srednji motor
+m=ev3.MediumMotor('outA')
+
+#Senzor za dotik
+t=ev3.TouchSensor('in1')
+a=t.is_pressed() 	# ali smo pritisnili gumb
