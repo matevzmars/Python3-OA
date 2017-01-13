@@ -95,6 +95,7 @@ t.up()
 t.down()
 t.reset()
 t.clear()
+t.circle(1)
 ###############################################################
 Lego Mindstorms
 
