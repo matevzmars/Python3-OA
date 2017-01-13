@@ -3,7 +3,7 @@ Python3-OA
 Na tej strani se nahajajo datoteke za učenje Pythona3 v sredini skupini 
 na Otroški akademiji. Z osvojenim znanjem bomo programirali Lego Mindstorms
 EV3 robotke s pomočjo Pythona3. Programi, katere smo napisali pri urah, se 
-nahajajo v mapi `Lego Mindstorms <https://github.com/matevzmars/Python3-OA/tree/master/Lego%20Mindstorms>`_
+nahajajo v mapi `Lego Mindstorms <./Lego Mindstorms>`_
 
 Verjetno se sprašujete zakaj pišem Python3. Razlog je v tem, da obstajata
 dve različici Pythona (Python2 in Python3), vendar je Python3 novejši in
