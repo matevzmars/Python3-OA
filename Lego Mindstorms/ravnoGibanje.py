@@ -11,7 +11,7 @@ m1.run_to_rel_pos(position_sp=360*2,speed_sp=500, stop_action='brake') #motor 1 
 m2.run_to_rel_pos(position_sp=360*2,speed_sp=500, stop_action='brake') #motor 2 se premakne za dva obrata
 
 while(len(m1.state)>0 or len(m2.state)>0): #počakaj dokler se motor 1 ali motor 2 premika
-	i=0										#neumen ukaz
+	pass									#neumen ukaz
 
 sleep(1) #počakamo 1 sekundo
 
@@ -19,7 +19,7 @@ m1.run_to_rel_pos(position_sp=-720,speed_sp=500, stop_action='brake') #motor 1 s
 m2.run_to_rel_pos(position_sp=-720,speed_sp=500, stop_action='brake') #motor 2 se premakne za 720 stopinj v drugo smer
 
 while(len(m1.state)>0 or len(m2.state)>0): #počakaj dokler se motor 1 ali motor 2 premika
-	i=0										#neumen ukaz
+	pass										#neumen ukaz
 
 sleep(1) #počakamo 1 sekundo
 

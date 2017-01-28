@@ -12,6 +12,6 @@ c=ev3.ColorSensor('in1') #barvni senzor smo priklopili na vhod 1
 m1.run_forever(speed_sp=500) #prvi motor se bo vrtel
 
 while(c.reflected_light_intensity()>50): #dokler bo barvni senzor prebral vrednost odbite svetlobe več od 50 se izvaja neumna zanka
-	i=0
+	pass
 
 m1.stop() #ustavimo motor 1
