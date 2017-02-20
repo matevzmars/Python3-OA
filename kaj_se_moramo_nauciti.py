@@ -1,12 +1,3 @@
-#Barvni senzor
-c=ev3.ColorSensor('in2')
-a=c.ambient_light_intensity() 	#intenziteta okoliške svetlobe
-b=c.blue() 	#koliko modre barve smo zaznali
-r=c.red() 	#koliko rdeče barve smo zaznali
-g=c.green() 	#koliko zelene barve smo zaznali
-d=c.color() 	#kakšno svetlobo smo zaznali (glej dokumentacijo)
-e=c.reflected_light_intensity() 	#intenziteta odbite svetlobe
-
 #Senzor razdalje
 u=ev3.UltrasonicSensor('in3')
 a=u.distance_centimeters()	#pove razdaljo
