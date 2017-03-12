@@ -123,9 +123,10 @@ m.duty_cycle_sp=30
 m.run_timed(time_sp=1000,speed_sp=100) #čas je v milisekundah
 
 m.reset()
+m.wait_while('running') #počakaj dokler se motor vrti
 
-m.duty_cycle_sp=50
-m.duty_cycle_sp
+m.duty_cycle_sp=50 #spremeni hitrost motorja
+m.duty_cycle_sp #vrni hitrost motorja
 
 from time import sleep
 sleep(5) #počaka 5 sekund
