@@ -145,3 +145,11 @@ r=c.red 	#koliko rdeče barve smo zaznali
 g=c.green 	#koliko zelene barve smo zaznali
 d=c.color 	#kakšno svetlobo smo zaznali (glej dokumentacijo)
 e=c.reflected_light_intensity 	#intenziteta odbite svetlobe
+
+#Žiroskop
+g=ev3.GyroSensor('in4')
+a=g.angle #vrne kot
+b=g.rate	#vrne kotno hitrost
+g.mode = 'GYRO-ANG' #žiroskop postavimo v način merjenja kota
+g.mode = 'GYRO-RATE' #žiroskop postavimo v način merjenja kotne hitrosti
+c=g.value() #izmerimo vrednost
