@@ -34,7 +34,7 @@ s.play_song(pesem, tempo=120, delay=50) #pesem je permanentni seznam permanentni
 .wait()
  
 #Zaslon
-s=ev3.Screen
+s=ev3.Screen()
 s.clear()
 s.draw.lik(argumenti) #draw uporablja PIL knjižnico (glej dokumentacijo)
 from PIL import Image
