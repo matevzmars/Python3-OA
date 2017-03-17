@@ -10,24 +10,24 @@ mC.stop_action = 'brake'
 
 u = ev3.UltrasonicSensor('in1') #ultrasonični senzor priklopimo na vhod 1
 
-mB = run_forever(speed_sp=450)
-mC = run_forever(speed_sp=450)
+mB.run_forever(speed_sp=450)
+mC.run_forever(speed_sp=450)
 
-zacetna = vmesna = u.distance_centimeters/10
-while(vmesna>zacetna-11):
-	vmesna = u.distance_centimeters/10
+zacetna = vmesna = u.distance_centimeters
+while(vmesna>zacetna-110):
+	vmesna = u.distance_centimeters
 	
 mB.stop()
 mC.stop()
 
 sleep(1)
 
-mB = run_forever(speed_sp=-450)
-mC = run_forever(speed_sp=-450)
+mB.run_forever(speed_sp=-450)
+mC.run_forever(speed_sp=-450)
 
-zacetna = vmesna = u.distance_centimeters/10
-while(vmesna<zacetna+6):
-	vmesna = u.distance_centimeters/10
+zacetna = vmesna = u.distance_centimeters
+while(vmesna<zacetna+60):
+	vmesna = u.distance_centimeters
 	
 mB.stop()
 mC.stop()
