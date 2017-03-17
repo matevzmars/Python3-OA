@@ -154,3 +154,8 @@ b=g.rate	#vrne kotno hitrost
 g.mode = 'GYRO-ANG' #žiroskop postavimo v način merjenja kota
 g.mode = 'GYRO-RATE' #žiroskop postavimo v način merjenja kotne hitrosti
 c=g.value() #izmerimo vrednost
+
+#Senzor razdalje
+u=ev3.UltrasonicSensor('in3')
+a=u.distance_centimeters	#pove razdaljo v milimetrih!
+b=u.other_sensor_present	#preveri ali sliši se kakšen ultrazvočni senzor

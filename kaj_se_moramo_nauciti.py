@@ -1,8 +1,3 @@
-#Senzor razdalje
-u=ev3.UltrasonicSensor('in3')
-a=u.distance_centimeters	#pove razdaljo v milimetrih!
-b=u.other_sensor_present	#preveri ali sliši se kakšen ultrazvočni senzor
-
 #Tipke
 b=ev3.Button()
 a=b.backspace	#preveri ali je pritisnjen gumb nazaj
