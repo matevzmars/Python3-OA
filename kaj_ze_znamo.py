@@ -170,3 +170,14 @@ a=b.left		#preveri ali je pritisnjen gumb levo
 a=b.right		#preveri ali je pritisnjen gumb desno
 a=b.any()		#preveri ali je pritisnjen kakršenkoli gumb
 a=b.buttons_pressed #vrne seznam pritisnjenih gumbov
+
+#Leds
+l=ev3.Leds()
+l.set_color(group, color) 
+#group je lahko l.LEFT ali l.RIGHT
+#color je lahko l.RED, l.GREEN, l.YELLOW, l.ORANGE ali l.AMBER
+l.set(group, brightness_pct=0.5, trigger='timer') #nastavimo svetlost na 50% in vklopimo utripanje
+l.brightness_pct=0.50 #nastavi svetlost
+l.delay_on=10 #pri utripanju je LED dioda prižgana 10 milisekund
+l.delay_off=20 #pri utripanju je LED dioda ugasnjena 20 milisekund
+l.all_off() #izključi LED diode
